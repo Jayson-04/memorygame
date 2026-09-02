@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+    display: flex;
+    font: bold 24px Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    display: flex;
+    font: bold 24px Arial, sans-serif;
+}
+
+p {
+    text-align: center;
+    display: flex;
+    font: 14px Arial, sans-serif;
+}
+
+.box {
+    border: 2px solid #005EB8;
+    border-radius: 10px;
+    padding: 20px;
+}
