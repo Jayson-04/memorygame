@@ -17,7 +17,8 @@ p {
 }
 
 .box {
-    border: 2px solid #005EB8;
+    border: 3px solid #005EB8;
+    background-color:#d3edff;
     border-radius: 10px;
     padding: 20px;
 }
