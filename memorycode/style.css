@@ -4,21 +4,18 @@ body {
 }
 
 h1 {
-    text-align: center;
-    display: flex;
     font: bold 24px Arial, sans-serif;
+    margin: 20px 0 10px;
 }
 
 h2 {
-    text-align: center;
-    display: flex;
     font: bold 24px Arial, sans-serif;
+    margin: 20px 0 10px;
 }
 
 p {
-    text-align: center;
-    display: flex;
     font: 14px Arial, sans-serif;
+    margin: 10px 0;
 }
 
 .box {
@@ -26,9 +23,11 @@ p {
     background-color: #d3edff;
     border-radius: 10px;
     padding: 10px;
+
     display: grid;
-    grid-template-columns: repeat(6, 150px);
-    gap: 2px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+    gap: 10px;
+    justify-content: center;
 }
 
 .box button.revealed {
@@ -36,20 +35,21 @@ p {
 }
 
 .box button {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin: 0;
     padding: 0;
+
     border: 2px solid #005EB8;
     background-color: #d2d2d2;
     border-radius: 10px;
     cursor: pointer;
 
     background-image: url("../M+M.jpg");
-    background-size: 100px;
+    background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,11 +77,58 @@ p {
 
 #logo_link {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 15px;
+    right: 20px;
 }
 
 #logo_link img {
-    width: 200px;
+    width: 150px;
     height: auto;
+}
+
+/* responsive design */
+
+@media (max-width: 700px) {
+
+    h1 {
+        font-size: 22px;
+        padding-right: 70px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .box {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+}
+
+@media (min-width: 701px) {
+    .box {
+        grid-template-columns: repeat(6, minmax(100px, 150px));
+    }
+}
+
+@media (max-width: 481px) {
+    #logo_link {
+        top: 10px;
+        right: 10px;
+    }
+
+    #logo_link img {
+        width: 70px;
+    }
+}
+
+@media (max-width: 391px) {
+    #logo_link img {
+        width: 60px;
+    }
 }
