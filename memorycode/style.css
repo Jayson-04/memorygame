@@ -62,5 +62,13 @@ button {
     border-color: #0073d1;
 }
 
+#logo_link {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
 
-
+#logo_link img {
+    width: 200px;
+    height: auto;
+}
