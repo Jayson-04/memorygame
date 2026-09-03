@@ -34,8 +34,19 @@ button {
     margin: 10px;
     padding: 65px;
     border: 2px solid #005EB8;
+    background-color: #d2d2d2;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.startButton {
+    margin: 5px;
+    padding: 10px 20px;
+    font: bold 18px Arial, sans-serif;
+    border: 2px solid #005EB8;
     background-color: #ffffff;
     border-radius: 10px;
     cursor: pointer;
+    display: inline-block;
 }
 
