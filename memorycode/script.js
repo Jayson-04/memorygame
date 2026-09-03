@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     gameOverMessage.style.display = "none";
     box.parentNode.insertBefore(gameOverMessage, box.nextSibling);
 
+    
+
     function updateScoreDisplay() {
         scoreDisplay.textContent = `Score: ${score}`;
     }
@@ -78,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.textContent = "";
         btn.disabled = false;
         btn.style.backgroundColor = "";
+        btn.classList.remove("revealed");
         delete btn.dataset.pairId;
         delete btn.dataset.label;
         delete btn.dataset.answer;
@@ -107,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
         flippedButtons.forEach((btn) => {
             btn.textContent = "";
             btn.style.backgroundColor = "";
+            btn.classList.remove("revealed");
         });
         flippedButtons = [];
         lockBoard = false;
@@ -151,6 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         btn.textContent = btn.dataset.label;
         btn.style.backgroundColor = "#ffffff";
+        btn.classList.add("revealed");
         flippedButtons.push(btn);
 
         if (flippedButtons.length === 2) {

@@ -31,7 +31,11 @@ p {
     gap: 2px;
 }
 
-button {
+.box button.revealed {
+    background-image: none;
+}
+
+.box button {
     width: 100px;
     height: 100px;
     margin: 10px;
@@ -40,6 +44,11 @@ button {
     background-color: #d2d2d2;
     border-radius: 10px;
     cursor: pointer;
+
+    background-image: url("../M+M.jpg");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #startButton {
