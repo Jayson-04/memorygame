@@ -70,6 +70,14 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: 0.2s ease;
+}
+
+.box button:hover {
+    background-color: #e6f3ff;
+    transform: scale(1.03);
+    border-color: #0073d1;
 }
 
 #startButton {
